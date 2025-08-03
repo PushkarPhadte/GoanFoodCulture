@@ -17,7 +17,6 @@ document.addEventListener('DOMContentLoaded', function() {
         showImage(idx);
     });
 
-    // Optional: allow left/right arrow keys for accessibility
     document.querySelector('.hero-slider').addEventListener('keydown', function(e) {
         if (e.key === 'ArrowLeft') {
             idx = (idx - 1 + total) % total;

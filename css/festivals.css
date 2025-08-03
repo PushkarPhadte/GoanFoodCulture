@@ -104,7 +104,6 @@ header {
     margin: 0 auto;
 }
 
-/* Festival gallery */
 .festival-gallery {
     background: #fef6db;
     border-radius: 20px;
@@ -176,7 +175,6 @@ header {
     pointer-events: auto;
 }
 
-/* Responsive */
 @media (max-width: 850px) {
     .festivals-hero { padding: 1.4rem 0.5rem; }
     .festival-list { gap: 1.1rem; }

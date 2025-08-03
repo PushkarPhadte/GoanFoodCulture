@@ -241,7 +241,6 @@ footer {
 .goa-essentials li { margin-bottom: 0.57em; }
 .goa-essentials b { color: #a8322f; }
 
-/* Responsive design */
 @media (max-width: 800px) {
     .dish-list {
         flex-direction: column;
