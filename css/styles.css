@@ -1,0 +1,253 @@
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: url('../assets/background.png') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    color: #333;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+main {
+    flex: 1;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0; left: 0; width: 100vw; height: 100vh;
+    background: rgba(247, 247, 247, 0.5);
+    z-index: -1;
+    pointer-events: none;
+}
+
+header {
+    background: #58bceb;
+    color: #fff;
+    padding: 1.5rem 0 1rem 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0 0 0.5rem 0;
+    font-size: 2.5rem;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+nav li {
+    margin: 0 1.2rem;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #951ecc;
+}
+
+main {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 1.2rem;
+}
+
+.intro {
+    background: #fffbe7;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 2px 10px #ccc2;
+    margin-bottom: 2rem;
+}
+
+.featured h2,
+.culture h2 {
+    margin-top: 0;
+    text-align: center;
+}
+
+.culture p {
+    margin-bottom: 1em;
+    font-size: 1.05rem;
+    color: #5a4a31;
+}
+.culture ul {
+    margin-left: 1.1rem;
+    color: #705c36;
+    font-size: 1rem;
+}
+.culture li {
+    margin-bottom: 0.5em;
+}
+
+.dish-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.dish-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 1px 8px #aaa2;
+    padding: 1rem;
+    width: 280px;
+    text-align: center;
+    position: relative;
+    transition: 
+        box-shadow 0.3s ease,
+        transform 0.3s ease;
+    cursor: pointer;
+    z-index: 0;
+}
+
+.dish-card:hover {
+    box-shadow: 0 12px 28px rgba(168, 50, 47, 0.25);
+    transform: translateY(-8px);
+    z-index: 5;
+}
+
+.dish-card::after {
+    content: '→';
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    font-size: 1.5rem;
+    color: #a8322f;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    transform: translateX(-5px);
+    pointer-events: none;
+}
+
+.dish-card:hover::after {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.dish-card img {
+    width: 220px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+}    
+
+.dish-card-link {
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+.dish-card-link .dish-card {
+    cursor: pointer;
+    transition: box-shadow 0.3s, transform 0.3s;
+}
+
+
+.dish-card-link:hover .dish-card {
+    box-shadow: 0 6px 24px #a8322f33;
+    transform: scale(1.04);
+}
+
+.culture {
+    background: #ffe7d1;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 2px 10px #ccc2;
+    margin-top: 2rem;
+}
+
+footer {
+    background: linear-gradient(135deg, #ffe7d1 0%, #b38745 100%);
+    color: #fff;
+    text-align: center;
+    padding: 0.5rem 0;
+    margin-top: 2rem;
+    font-size: 0.95rem;
+}
+
+/* History */
+.goa-history {
+    background: #fff7ef;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px #c1b09a22;
+    padding: 2rem;
+    margin-top: 2.8rem;
+}
+.goa-history h2 {
+    color: #a8322f;
+    margin-top: 0;
+    letter-spacing: 0.03em;
+}
+.goa-history p {
+    color: #564e3f;
+    font-size: 1.09rem;
+    line-height: 1.65;
+    margin-bottom: 0;
+}
+
+.goa-funfact {
+    background: linear-gradient(90deg, #fbeac59d 60%, #ffeda749 100%);
+    color: #974313;
+    border-radius: 22px;
+    padding: 1.1em 1.6em;
+    text-align: center;
+    margin: 2.2rem 0;
+    font-weight: 500;
+    font-size: 1.05em;
+    box-shadow: 0 2px 12px #a8322f11;
+}
+
+.goa-essentials {
+    background: #f6f5fae6;
+    border-radius: 14px;
+    box-shadow: 0 1.5px 9px #b3874522;
+    padding: 2rem;
+    margin-top: 2.4rem;
+    margin-bottom: 2.2rem;
+}
+.goa-essentials h2 {
+    color: #589a40;
+    margin-bottom: 0.7em;
+}
+.goa-essentials ul {
+    list-style: disc inside;
+    color: #835200;
+    margin: 0 0 0 1.3em;
+    font-size: 1.08rem;
+    line-height: 1.65;
+    padding: 0;
+}
+.goa-essentials li { margin-bottom: 0.57em; }
+.goa-essentials b { color: #a8322f; }
+
+/* Responsive design */
+@media (max-width: 800px) {
+    .dish-list {
+        flex-direction: column;
+        align-items: center;
+    }
+    main {
+        padding: 0 0.5rem;
+    }
+}

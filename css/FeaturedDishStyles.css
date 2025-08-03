@@ -1,0 +1,218 @@
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: url('../assets/spice2.webp') no-repeat center center fixed;
+    background-size: cover;
+    color: #2a1912;
+    margin: 0;
+    line-height: 1.7;
+}
+
+.dish-hero {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(90deg, #fef9e7ee 55%, #fff5e3dc 100%);
+    border-radius: 0 0 40px 40px;
+    box-shadow: 0 8px 24px #a8322f33;
+    margin: 0;
+    padding: 3.6rem 2.2rem 2.3rem 2.2rem;
+    min-height: 300px;
+    gap: 2rem;
+}
+
+.hero-text {
+    min-width: 250px;
+    flex: 1 1 320px;
+    margin-right: 1.5rem;
+}
+.hero-title {
+    color: #a8322f;
+    font-size: 2.3rem;
+    letter-spacing: 1.2px;
+    margin: 0 0 0.7rem 0;
+}
+.tag-new {
+    background: #efc058;
+    color: #a8322f;
+    padding: 0.13em 0.6em;
+    font-size: 1.05rem;
+    border-radius: 2em;
+    margin-left: 0.7em;
+    vertical-align: super;
+    letter-spacing: 0.1em;
+}
+
+.hero-text p {
+    font-size: 1.12rem;
+    color: #5b2d18;
+    margin-bottom: 0.5em;
+}
+
+.hero-slider {
+    flex: 0 0 320px;
+    position: relative;
+    width: 330px;
+    height: 220px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.slider-images {
+    width: 320px;
+    height: 210px;
+    overflow: hidden;
+    border-radius: 19px;
+    box-shadow: 0 4px 22px #a8322f23;
+    background: #fff9de;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.slider-img {
+    width: 320px;
+    height: 210px;
+    object-fit: cover;
+    display: none;
+    border-radius: 19px;
+    border: 4px solid #efd7ac95;
+    position: absolute;
+    top: 0; left: 0;
+    opacity: 0;
+    transition: opacity 0.45s;
+}
+.slider-img.active {
+    display: block;
+    position: relative;
+    opacity: 1;
+}
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #fff9e9;
+    color: #a8322f;
+    border: none;
+    font-size: 2.1rem;
+    padding: 0 0.34em;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 2px 8px #a8322f17;
+    z-index: 5;
+    transition: background 0.20s, color 0.20s;
+}
+.arrow:focus, .arrow:hover {
+    background: #fff0c2;
+    color: #ab096b;
+    box-shadow: 0 6px 24px #c8822c11;
+}
+.arrow-left { left: -32px; }
+.arrow-right { right: -32px; }
+
+@media (max-width: 800px) {
+    .dish-hero { flex-direction: column; align-items: center; padding: 2.6rem 0.4rem 1.8rem 0.4rem;}
+    .hero-slider { width: 320px; }
+}
+
+@media (max-width: 400px) {
+    .slider-images, .hero-slider { width:95vw; min-width: 0; }
+    .slider-img { width: 95vw; min-width:0; height: 36vw; max-width: 260px;}
+}
+
+.dish-info, .dish-recipe, .dish-facts-types {
+    background: #fffbe7df;
+    margin: 2.5rem auto;
+    border-radius: 17px;
+    box-shadow: 0 3px 24px #d3af8055;
+    max-width: 690px;
+    padding: 2.1rem 1.4rem 1.5rem 1.4rem;
+}
+
+.recipe-layout {
+    display: flex;
+    column-gap: 2.5rem;
+    row-gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+.ingredients, .steps {
+    flex: 1 1 170px;
+}
+.ingredients ul, .steps ol {
+    margin: 0.7em 0 0 1.1em;
+    padding-left: 0.8em;
+}
+.ingredients h4, .steps h4 { color: #a8322f; margin-bottom: 0.5em; }
+
+@media (max-width: 650px) {
+    footer {
+        font-size: 0.92rem;
+        padding: 0.7rem 0.2rem;
+    }
+    .recipe-layout { flex-direction: column; }
+}
+
+.dish-facts-types {
+    display: flex;
+    gap: 2.4rem;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    margin-bottom: 3.2rem;
+    padding: 1.4rem 1rem 1.2rem 1rem;
+}
+.funfact {
+    background: #fae7b6;
+    color: #a8322f;
+    border-radius: 14px;
+    padding: 1.1rem 1.3rem 0.7rem 1.2rem;
+    font-size: 1.09rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.85em;
+    min-width: 170px;
+}
+.funfact span {
+    font-size: 1.6em;
+    margin-top: -0.23em;
+}
+.types {
+    flex: 1 1 220px; 
+    background: #fcf3da;
+    border-radius: 11px;
+    padding: 1.1rem 0.9rem 0.7rem 1rem;
+    font-size: 1.02rem;
+}
+.types h4 { color: #a8322f; margin-bottom: 0.42em; }
+
+footer {
+    position: relative;
+    left: 50%;
+    right: 50%;
+    width: 100vw;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    background: linear-gradient(90deg, #fbeac5 80%, #a8322f 100%);
+    color: #6d2e10;
+    text-align: center;
+    padding: 0.8rem 0;
+    border-top: 2px solid #a8322f22;
+    font-size: 0.96rem;
+    margin-top: 3.2rem;
+    border-radius: 0;
+    box-shadow: 0 -2px 14px #a8322f17;
+}
+
+footer p {
+    margin: 0;
+    line-height: 1.5;
+}
+
+footer a {
+    color: #A8322F;
+    text-decoration: underline dotted;
+    transition: color 0.2s;
+}
+footer a:hover {
+    color: #e7a419;
+}

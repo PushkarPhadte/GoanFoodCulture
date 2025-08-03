@@ -1,0 +1,255 @@
+body {
+    background: #131415;
+    color: #ededed;
+}
+
+.header-dark {
+    background: #131415;
+    color: #fff;
+    padding: 1rem 0 1.2rem 0;
+    text-align: center;
+}
+.navbar-dark {
+    background: rgb(19 20 21);
+    box-shadow: 10 20px 200px #0c0d0e;
+    border-radius: 26px;
+}
+.navbar-dark li a {
+    color: #efc058;
+    text-shadow: 1px 1px 2px #1e2124;
+    padding: 0.6em 1.3em;
+    border-radius: 20px;
+    display: inline-block;
+    transition: 
+        background 0.2s,
+        color 0.2s,
+        box-shadow 0.14s;
+    line-height: 1.6;
+    background: transparent;
+}
+.navbar-dark li a.active,
+.navbar-dark li a:hover {
+    color: #131415;
+    background: #efc058;
+    border-radius: 20px;
+}
+
+.hero-cuisine {
+    background: linear-gradient(135deg, #202127 70%, #242738 100%);
+    padding: 3rem 2rem 2rem 2rem;
+    text-align: center;
+    border-radius: 0 0 42px 42px;
+    margin-bottom: 2.5rem;
+    box-shadow: 0 4px 24px #0006;
+}
+.hero-cuisine h2 {
+    color: #fed88b;
+    font-size: 2.2rem;
+    margin-bottom: 0.6rem;
+    letter-spacing: 1px;
+}
+.hero-cuisine p {
+    color: #eee6d6;
+    font-size: 1.08rem;
+    line-height: 1.7;
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+.cuisine-feature-list {
+    display: flex;
+    gap: 2.2rem;
+    justify-content: center;
+    margin: 0 0 2.8rem 0;
+    flex-wrap: wrap;
+}
+.cuisine-feature-card {
+    background: rgba(23, 22, 30, 0.89);
+    border-radius: 20px;
+    box-shadow: 0 4px 22px #0003, 0 1px 4px #efc05833;
+    padding: 1.5rem 1.2rem 1.3rem 1.2rem;
+    width: 265px;
+    color: #faefcd;
+    text-align: center;
+    min-width: 220px;
+    transition: transform 0.15s;
+}
+.cuisine-feature-card:hover {
+    transform: translateY(-6px) scale(1.04);
+    box-shadow: 0 10px 32px #efc05833;
+    background: rgba(39, 36, 52, 0.93);
+}
+.cuisine-feature-card img {
+    width: 90px; height: 90px; object-fit: cover;
+    border-radius: 50%; margin-bottom: 1rem;
+    border: 3.5px solid #fed88b;
+    box-shadow: 0 2px 10px #0003;
+}
+.cuisine-feature-card h3 { color: #efc058; margin-bottom: 0.4em; font-size: 1.17rem; }
+
+.cuisine-quotes {
+    text-align: center;
+    margin: 2rem auto 2.5rem auto;
+}
+.cuisine-quotes blockquote {
+    color: #fed88b;
+    font-size: 1.13rem;
+    line-height: 1.5;
+    border-left: 4px solid #efc058cc;
+    padding-left: 1.2rem;
+    font-style: italic;
+    max-width: 520px;
+    margin: 0 auto;
+    background: rgba(36, 36, 32, 0.45);
+    border-radius: 13px;
+}
+
+/* Modern grid for dishes & drinks */
+.modern-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(195px,1fr));
+    gap: 2rem;
+    padding: 0 2rem 3.2rem 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+.grid-card {
+    background: #161820e0;
+    border-radius: 18px;
+    box-shadow: 0 2px 14px #0005, 0 1.5px 2px #efc05817;
+    padding: 1rem 0.95rem 1.1rem 0.95rem;
+    color: #e2cfb3;
+    text-align: center;
+    transition: transform 0.17s, box-shadow 0.17s;
+    min-width: 147px;
+}
+.grid-card:hover {
+    transform: scale(1.045) translateY(-3px);
+    box-shadow: 0 8px 34px #efc0581c;
+    background: #5b67a0f9;
+}
+.grid-card img {
+    width: 100px; height: 80px;
+    border-radius: 11px;
+    margin-bottom: 0.9rem;
+    object-fit: cover;
+    filter: brightness(96%) saturate(110%);
+    border: 2.5px solid #efc058b2;
+}
+.grid-card h4 {
+    color: #efc058;
+    margin: 0 0 0.3rem 0;
+    font-size: 1.07rem;
+}
+
+/* Footer styles */
+.footer-dark {
+    background: #161820f9;
+    color: #bbb178;
+    text-align: center;
+    padding: 0.6rem 0;
+    border-top: 2px solid #efc0585b;
+    font-size: 0.98rem;
+    margin-top: 2.5rem;
+}
+.footer-dark p { margin: 0; }
+
+/* Cuisine Timelines */
+.cuisine-timeline {
+    background: #181821;
+    border-radius: 18px;
+    padding: 2.2rem 1.3rem 1.6rem 1.3rem;
+    margin: 2.5rem auto 2rem auto;
+    max-width: 700px;
+    color: #ffe6a8;
+    box-shadow: 0 2px 12px #0002;
+}
+.cuisine-timeline h3 { color: #efc058; margin-bottom: 1rem; letter-spacing: 0.5px; }
+.cuisine-timeline ul { list-style: none; padding: 0; }
+.cuisine-timeline li {
+    margin-bottom: 1.3rem;
+    display: flex;
+    align-items: baseline;
+}
+.timeline-year {
+    font-weight: bold; color: #fed88b; background: #23212a; border-radius: 12px;
+    padding: 0.2em 0.7em; margin-right: 1.2em; min-width: 85px; text-align: center;
+}
+.timeline-desc { font-size: 1.04em; color: #ffe6a8; }
+
+
+/* Cuisine Map */
+.cuisine-map {
+    background: #18181c;
+    border-radius: 14px;
+    padding: 1.5rem 1.1rem;
+    margin: 1.5rem auto 2.5rem auto;
+    max-width: 600px;
+    box-shadow: 0 2px 10px #0002;
+}
+.cuisine-map h3 { color: #efc058; margin-bottom: 0.8em; }
+.cuisine-map table { width: 100%; border-collapse: collapse; }
+.cuisine-map th, .cuisine-map td {
+    border: 1px solid #232329;
+    padding: 0.55em 0.7em;
+    color: #efb358;
+    background: #222226;
+}
+.cuisine-map th { background: #16161a; font-weight: 600; }
+
+.ingredient-spotlight {
+    margin: 2.5rem auto;
+    max-width: 850px;
+}
+.ingredient-spotlight h3 { color: #efc058; margin-bottom: 1rem; }
+.ingredient-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+.ingredient-card {
+    background: #19171b;
+    border-radius: 16px;
+    box-shadow: 0 1px 12px #efc05822;
+    padding: 1rem 0.8rem 1.4rem 0.8rem;
+    width: 220px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #f5e9bf;
+}
+.ingredient-card img {
+    width: 62px; height: 62px; border-radius: 14px;
+    margin-bottom: 0.7em; border: 3px solid #efc058b7;
+    background: #232025;
+}
+.ingredient-card h4 { color: #fed88b; margin-bottom: 0.15em; }
+.ingredient-card p { font-size: 0.97em; color: #eee1bb; text-align: center; }
+
+.fancy-stats-header {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    font-style: italic;
+    color: #efc058;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-align: center;
+    margin-bottom: 1.4rem;
+    margin-top: 2.8rem;
+    text-shadow: 1px 2px 8px #24221c75;
+}
+
+/* Responsive adjustments */
+@media (max-width: 950px) {
+    .cuisine-feature-list { flex-direction: column; align-items: center; }
+    .hero-cuisine { padding: 2.2rem 0.7rem; }
+    .modern-grid { padding: 0 0.7rem 2rem 0.7rem; }
+}
+
+@media (max-width: 600px) {
+    .modern-grid { gap: 1.15rem; }
+    .fancy-stats-header { font-size: 1.3rem; margin-top: 2rem; }
+    .cuisine-feature-card { width: 95vw; min-width: 0; padding: 1rem 0.5rem 0.6rem 0.5rem; }
+    .scroll-gallery { padding: 1.1rem 0.2rem 1.1rem 0.2rem; border-radius: 0 0 13px 13px; }
+}
