@@ -104,15 +104,6 @@ main {
     justify-content: center;
 }
 
-@keyframes floating {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-12px);
-  }
-}
-
 @keyframes fadeRotateIn {
   0% {
     opacity: 0;
@@ -145,13 +136,6 @@ main {
     cursor: pointer;
     z-index: 0;
 }
-
-.dish-card:nth-child(1) { animation-delay: 0.1s; }
-.dish-card:nth-child(2) { animation-delay: 0.25s; }
-.dish-card:nth-child(3) { animation-delay: 0.4s; }
-.dish-card:nth-child(4) { animation-delay: 0.55s; }
-.dish-card:nth-child(5) { animation-delay: 0.7s; }
-.dish-card:nth-child(6) { animation-delay: 0.85s; }
 
 .dish-card:hover {
   animation-play-state: paused;
