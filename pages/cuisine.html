@@ -60,7 +60,7 @@
             </blockquote>
         </section>
 
-        <section class="modern-grid">
+        <section class="modern-grid animated-reveal">
             <div class="grid-card">
                 <img src="../assets/sol_kadhi.jpg" alt="Sol Kadhi">
                 <h4>Sol Kadhi</h4>
@@ -112,11 +112,11 @@
             </div>
         </section>
 
-        <section class="section-stats-header">
+        <section class="section-stats-header animated-reveal">
             <h2 class="fancy-stats-header"><em>Some Interesting Statistics</em></h2>
         </section>
 
-        <section class="cuisine-timeline">
+        <section class="cuisine-timeline animated-reveal">
             <h3>The Evolution of Goan Cuisine</h3>
             <ul>
                 <li>
@@ -133,7 +133,7 @@
                 </li>
             </ul>
         </section>
-        <section class="cuisine-map">
+        <section class="cuisine-map animated-reveal">
             <h3>Goan Specialties by Region</h3>
             <table>
                 <tr>
@@ -157,5 +157,21 @@
     <footer class="footer-dark">
         <p>&copy; 2025 Goan Food Culture. Released under the <a href="https://opensource.org/licenses/MIT" target="_blank" rel="noopener">MIT License</a></p>
     </footer>
+
+    <script>
+        function revealOnScroll() {
+        const elements = document.querySelectorAll('.animated-reveal');
+        const windowHeight = window.innerHeight;
+        elements.forEach(element => {
+            const elementTop = element.getBoundingClientRect().top;
+            if (elementTop < windowHeight - 100) {
+                element.classList.add('visible');
+            }
+        });
+        }
+        window.addEventListener('scroll', revealOnScroll);
+        window.addEventListener('load', revealOnScroll);
+    </script>
+
 </body>
 </html>
