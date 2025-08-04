@@ -81,7 +81,25 @@
             </ul>
         </section>
 
-        <section class="culture">
+        <section class="culture animated-reveal">
+
+        <script>
+            function revealOnScroll() {
+                const element = document.querySelector('.animated-reveal');
+                if(!element) return;
+                const windowHeight = window.innerHeight;
+                const elementTop = element.getBoundingClientRect().top;
+
+                if(elementTop < windowHeight - 100) {
+                    element.classList.add('visible');
+                    window.removeEventListener('scroll', revealOnScroll);
+                }
+            }
+
+            window.addEventListener('scroll', revealOnScroll);
+            window.addEventListener('load', revealOnScroll);
+        </script>
+
             <h2>Culinary Traditions</h2>
             <p>
                  Goan cuisine reflects a unique blend of flavors and cultural influences drawn from its history and geography. Its culinary traditions revolve around the abundant seafood, rich use of coconut, kokum, and exotic spices.
